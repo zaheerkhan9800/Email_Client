@@ -6,7 +6,6 @@ import EmailsScreen from "./screens/EmailsScreen";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import ComposeScreen from "./screens/ComposeScreen";
 import { Ionicons } from "@expo/vector-icons";
-import FavouritesContextProvider from "./store/context/fovourites-context";
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -52,7 +51,6 @@ export default function App() {
         backgroundColor="#ffffff"
         barStyle="dark-content"
       />
-      <FavouritesContextProvider>
         <NavigationContainer>
           <Stack.Navigator
             screenOptions={{
@@ -77,7 +75,6 @@ export default function App() {
           </Stack.Navigator>
           {/* <CategoriesScreen /> */}
         </NavigationContainer>
-      </FavouritesContextProvider>
     </>
     // </View>
   );
